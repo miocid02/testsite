@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contacto · Biblia de Navarra</title>
+<meta name="description" content="App gratuita para leer la Biblia de Navarra sin conexión.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="band"><div class="band-in">
+<a class="marca" href="index.html">Biblia de Navarra</a>
+<nav aria-label="Principal">
+<a href="index.html">Inicio</a>
+<a href="novedades.html">Novedades</a>
+<a href="donar.html">Apoyar</a>
+<a href="contacto.html" aria-current="page">Contacto</a>
+<a href="creditos.html">Créditos</a>
+<a href="privacidad.html">Privacidad</a>
+</nav></div></header>
+<main>
+<h1>Contacto</h1>
+<p>Escríbenos para avisar de un error, sugerir un cambio o preguntar algo. El mensaje llega al mantenedor sin que su correo aparezca aquí.</p>
+<form id="form" action="https://api.web3forms.com/submit" method="post">
+<!-- CAMBIAR: clave pública de Web3Forms (se obtiene gratis con tu correo en web3forms.com) -->
+<input type="hidden" name="access_key" value="TU_CLAVE_WEB3FORMS">
+<input type="hidden" name="from_name" value="Web Biblia de Navarra">
+<input type="hidden" name="subject" value="[BibliaNavarra][WEB] Mensaje">
+<input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label>Motivo
+<select name="tipo" required>
+<option value="SUGERENCIA">Sugerencia o cambio</option>
+<option value="ERROR">Error en la app</option>
+<option value="TEXTO">Error en el texto bíblico</option>
+<option value="LICENCIA">Derechos o licencia</option>
+<option value="DONACION">Donaciones</option>
+<option value="OTRO">Otro</option>
+</select></label>
+<label>Asunto
+<input name="asunto" maxlength="80" required></label>
+<label>Mensaje
+<textarea name="mensaje" required></textarea></label>
+<label>Tu correo (solo si quieres respuesta)
+<input type="email" name="email" autocomplete="email"></label>
+<div><button class="btn" type="submit">Enviar mensaje</button></div>
+<p id="estado" role="status" aria-live="polite"></p>
+</form>
+<p class="nota">Si reportas un error, indica el libro, capítulo y versículo, o el modelo de tu teléfono. Ver <a href="privacidad.html">cómo se tratan los datos</a>.</p>
+<script src="app.js"></script>
+</main>
+<footer>Biblia de Navarra · app independiente y gratuita · <a href="privacidad.html">Privacidad</a></footer>
+</body>
+</html>
